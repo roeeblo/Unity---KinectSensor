@@ -13,3 +13,5 @@ My project maps each depth value into a Color32 pixel and constructs a Texture2D
 The resulting texture is updated each frame and applied to a Quad in the scene.
 
 Fully Video presenting my project:
+
+www.youtube.com/watch?v=Z4bHarA6ugA&feature=youtu.be

@@ -21,19 +21,6 @@ Pixels that fall within selected depth ranges are highlighted with color
 The processed frame is rendered as a texture inside Unity
 
 
-## Computer Vision Context
-
-Although this project does not use deep learning models, it demonstrates several concepts commonly used in computer vision systems.
-
-Working with depth sensors  
-Processing per-pixel spatial data  
-Segmenting a scene based on distance  
-Visualizing spatial information in real time  
-Interpreting sensor input and converting it into visual output
-
-Depth cameras such as Kinect are widely used in robotics, motion tracking, 3D scanning, gesture recognition, and spatial analysis systems.
-
-
 ## Technical Flow
 
 Capture a depth frame from the Kinect sensor or from an XEF recording

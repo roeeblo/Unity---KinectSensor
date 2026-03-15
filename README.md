@@ -68,18 +68,3 @@ Exploring depth sensor data inside Unity
 
 Prototyping systems that rely on spatial awareness
 
-
-## Project Structure
-
-Assets/Scripts contains the Kinect processing and visualization logic
-
-Depth frames are read from the Kinect sensor or from recorded XEF files
-
-Processed pixel data is converted into a texture that is displayed in the Unity scene
-
-
-## Notes
-
-This project focuses on the depth processing pipeline rather than gameplay or user interaction.
-
-The goal is to demonstrate how raw depth sensor data can be captured, processed, and visualized in real time within Unity.

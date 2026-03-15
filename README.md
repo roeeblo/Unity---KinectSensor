@@ -1,17 +1,98 @@
-# Kinect Depth Sensor - Unity Project
+# Kinect Depth Processing in Unity
 
-This home-task demonstrates depth processing using the Kinect (or XEF file), to display colors based on distances.
+This project demonstrates real-time depth sensing and visualization using the Microsoft Kinect sensor inside Unity.
 
-Kinect provides depth data as a one dimensional array of short values.  
-Each value represents the distance (in millimeters) from the sensor to the detected surface at that pixel.
-My project maps each depth value into a Color32 pixel and constructs a Texture2D that Unity can display.
+The system reads raw depth frames from the Kinect device or from recorded XEF files, processes the depth values per pixel, and converts distance ranges into visual output.  
+The result is a live depth-based segmentation that highlights objects according to their distance from the sensor.
 
-- 1000–1500 mm is Red  
-- 1500–2000 mm is Green  
-- all other distances are Black
+The focus of this project is working with depth data, spatial information, and real-time pixel processing, which are common building blocks in computer vision systems.
 
-The resulting texture is updated each frame and applied to a Quad in the scene.
 
-Fully Video presenting my project:
+## Overview
 
-www.youtube.com/watch?v=Z4bHarA6ugA&feature=youtu.be
+The Kinect sensor provides a depth stream where each pixel represents the distance between the sensor and the scene.
+
+In this project:
+
+The depth frame is read from the Kinect sensor  
+Each pixel contains a distance value measured in millimeters  
+The values are analyzed in real time  
+Pixels that fall within selected depth ranges are highlighted with color  
+The processed frame is rendered as a texture inside Unity
+
+
+## Computer Vision Context
+
+Although this project does not use deep learning models, it demonstrates several concepts commonly used in computer vision systems.
+
+Working with depth sensors  
+Processing per-pixel spatial data  
+Segmenting a scene based on distance  
+Visualizing spatial information in real time  
+Interpreting sensor input and converting it into visual output
+
+Depth cameras such as Kinect are widely used in robotics, motion tracking, 3D scanning, gesture recognition, and spatial analysis systems.
+
+
+## Technical Flow
+
+Capture a depth frame from the Kinect sensor or from an XEF recording
+
+The frame is received as a one-dimensional array containing the depth value of every pixel
+
+Each depth value represents the distance from the sensor in millimeters
+
+The system analyzes the values and checks whether they fall within predefined distance ranges
+
+Pixels that match the selected ranges are assigned a specific color
+
+The processed pixel array is used to build a Texture2D
+
+The texture is updated and rendered in Unity in real time
+
+
+## Depth Segmentation Logic
+
+Objects are highlighted according to their distance from the sensor.
+
+1000–1500 millimeters are displayed in red
+
+1500–2000 millimeters are displayed in green
+
+All other distances are displayed as black
+
+
+## Technologies
+
+Unity  
+Microsoft Kinect Sensor SDK  
+C#  
+Depth frame processing  
+Real-time texture rendering
+
+
+## Use Cases
+
+Depth-based scene visualization
+
+Basic spatial segmentation using distance thresholds
+
+Exploring depth sensor data inside Unity
+
+Prototyping systems that rely on spatial awareness
+
+
+## Project Structure
+
+Assets/Scripts contains the Kinect processing and visualization logic
+
+Depth frames are read from the Kinect sensor or from recorded XEF files
+
+Processed pixel data is converted into a texture that is displayed in the Unity scene
+
+
+## Notes
+
+This project focuses on the depth processing pipeline rather than gameplay or user interaction.
+
+The goal is to demonstrate how raw depth sensor data can be captured, processed, and visualized in real time within Unity.

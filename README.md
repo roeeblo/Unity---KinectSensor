@@ -1,5 +1,6 @@
 # Kinect Depth Processing in Unity
 
+
 This project demonstrates real-time depth sensing and visualization using the Microsoft Kinect sensor inside Unity.
 
 The system reads raw depth frames from the Kinect device or from recorded XEF files, processes the depth values per pixel, and converts distance ranges into visual output.  

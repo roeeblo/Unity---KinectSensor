@@ -1,5 +1,7 @@
 # Kinect Depth Processing in Unity
-
+<p align="center">
+  <img src="assets/images/kinect_depth_demo.png" width="800">
+</p>
 
 This project demonstrates real-time depth sensing and visualization using the Microsoft Kinect sensor inside Unity.
 
